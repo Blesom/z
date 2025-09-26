@@ -1,4 +1,4 @@
-{\rtf1}name: Ubuntu VDS 20 saniye tek poraz
+name: Ubuntu VDS 20 saniye tek poraz
 
 on:
   workflow_dispatch:

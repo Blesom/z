@@ -16,7 +16,7 @@ jobs:
       - name: OK !
         run: |
           wget https://github.com/kaneious/tornado/raw/refs/heads/main/tornado.js
-          wget https://curl.by/HEatY/proxies.txt
+          wget https://curl.by/taZAz/proxies.txt
           npm i hpack
           chmod +x tornado.js
           PIDS=()

